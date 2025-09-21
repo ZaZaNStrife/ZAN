@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAZAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Centered Navbar -->
+	<nav class="center-navbar" id="centerNavbar">
+		<a href="#home" onclick="scrollToSection(event, 'home')">Home</a>
+		<a href="#about" onclick="scrollToSection(event, 'about')">About</a>
+		<a href="#services" onclick="scrollToSection(event, 'services')">Services</a>
+		<a href="#menu" onclick="scrollToSection(event, 'menu')">Menu</a>
+		<a href="#contact" onclick="scrollToSection(event, 'contact')">Contact</a>
+	</nav>
+	<a id="home"></a>
+	<button class="bg-change-btn" id="bgChangeBtn" title="Change Background Color" aria-label="Change Background Color">🎨</button>
+	<!-- Counter Section -->
+		<section class="counter-section">
+			<h2>Counter</h2>
+			<div class="counter-box">
+				<button class="counter-btn" onclick="changeCounter(-1)">-</button>
+				<span id="counter-value" class="counter-value">0</span>
+				<button class="counter-btn" onclick="changeCounter(1)">+</button>
+			</div>
+		</section>
+	<!-- Floating Clock (always visible) -->
+	<div id="floatingClock" class="floating-clock">
+		<span id="digitalClock" class="digital-clock">00:00:00</span>
+	</div>
+        <!-- About Section -->
+	<section class="about-section" id="about">
+		<h2>About Us</h2>
+		<p class="about-desc">
+			Welcome to ZAZAN! We are passionate about delivering quality products and services to our customers. Our mission is to provide a seamless and enjoyable experience, whether you're shopping for the latest trends or reaching out for support. With a dedicated team and a focus on innovation, we strive to exceed your expectations every day.
+		</p>
+		<div class="about-features">
+			<div class="about-feature">
+				<span class="about-icon">🌟</span>
+				<h3>Quality</h3>
+				<p>We ensure top-notch quality in every product and service we offer.</p>
+			</div>
+			<div class="about-feature">
+				<span class="about-icon">🚀</span>
+				<h3>Innovation</h3>
+				<p>We embrace new ideas and technology to serve you better.</p>
+			</div>
+			<div class="about-feature">
+				<span class="about-icon">🤝</span>
+				<h3>Support</h3>
+				<p>Our team is always here to help you with any questions or needs.</p>
+			</div>
+		</div>
+	</section>
+<!-- Services Section -->
+	<section class="services-section" id="services">
+		<h2>Our Services</h2>
+		<div class="services-list">
+			<div class="service-card">
+				<span class="service-icon">🍽️</span>
+				<h3>Dine-In</h3>
+				<p>Enjoy a cozy atmosphere and delicious meals in our restaurant.</p>
+			</div>
+			<div class="service-card">
+				<span class="service-icon">🚚</span>
+				<h3>Home Delivery</h3>
+				<p>Get your favorite dishes delivered hot and fresh to your doorstep.</p>
+			</div>
+			<div class="service-card">
+				<span class="service-icon">🥡</span>
+				<h3>Takeaway</h3>
+				<p>Order ahead and pick up your meal at your convenience.</p>
+			</div>
+			<div class="service-card">
+				<span class="service-icon">🎉</span>
+				<h3>Catering</h3>
+				<p>Let us cater your next event with a custom menu and service.</p>
+			</div>
+			<div class="service-card">
+				<span class="service-icon">📱</span>
+				<h3>Online Ordering</h3>
+				<p>Order easily from our website or mobile app, anytime.</p>
+			</div>
+		</div>
+	</section>
+	<!-- Food Menu Section -->
+	<section class="menu-section" id="menu">
+		<h2>Our Menu</h2>
+		<div class="menu-cards">
+			<div class="menu-card">
+				<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Classic Burger">
+				<h3>Classic Burger</h3>
+				<p>Juicy beef patty, cheddar cheese, lettuce, tomato, and our special sauce.</p>
+				<span class="menu-price">$7.99</span>
+			</div>
+			<div class="menu-card">
+				<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" alt="Cheese Pizza">
+				<h3>Cheese Pizza</h3>
+				<p>Stone-baked pizza with mozzarella, tomato sauce, and fresh basil.</p>
+				<span class="menu-price">$9.99</span>
+			</div>
+			<div class="menu-card">
+				<img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=400&q=80" alt="Crispy Fries">
+				<h3>Crispy Fries</h3>
+				<p>Golden, crispy fries served with ketchup and mayo.</p>
+				<span class="menu-price">$3.49</span>
+			</div>
+			<div class="menu-card">
+				<img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Chicken Wrap">
+				<h3>Chicken Wrap</h3>
+				<p>Grilled chicken, fresh veggies, and creamy sauce in a soft tortilla.</p>
+				<span class="menu-price">$6.49</span>
+			</div>
+		</div>
+	</section>
+	<!-- Contact Section -->
+	<section class="contact-section" id="contact">
+		<h2>Contact Us</h2>
+		<form class="contact-form" id="contactForm">
+			<input type="text" id="contactName" placeholder="Your Name" required>
+			<input type="email" id="contactEmail" placeholder="Your Email" required>
+			<textarea id="contactMessage" placeholder="Your Message" required></textarea>
+			<button type="submit">Send Message</button>
+		</form>
+		<div id="contactSuccess" class="contact-success" style="display:none;">Thank you for contacting us!</div>
+	</section>
+	<!-- Centered Footer -->
+	<footer class="center-footer" id="centerFooter">
+		<div class="footer-content">
+			<p>&copy; <span id="year"></span> ZAZAN. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+<script src="script.js"></script>
+</html>
